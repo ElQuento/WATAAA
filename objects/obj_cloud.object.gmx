@@ -29,7 +29,7 @@
 energy = 10;
 phy_bullet = true;
 alarm[1] = room_speed;
-shooting = false;
+shooting = true;
 alarm[0] = 1;
 </string>
           </argument>
@@ -78,18 +78,49 @@ alarm[1] = room_speed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Shoot raindrops
-if (shooting) {
-    var r = instance_create(random_range(x - sprite_width / 2, x + sprite_width/2), y, obj_raindrop);
-    var xforce = lengthdir_x(5, mouse_x);
-    var yforce = lengthdir_y(5, mouse_y);
-    r.creator = id;
-    with (r) {
-        physics_apply_impulse(x, y, -xforce, -yforce); //debug
-        //image_angle = 
+            <string>///Shooting true
+
+shooting = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Shoot raindrops if left mouse button is pressed
+if (shooting &amp;&amp; mouse_check_button(mb_left) &amp;&amp; energy &gt;= 0) {
+    shooting = false;
+    _sign = 1;
+    if (mouse_y &lt; y) _sign = -1;
+    for (i = 0; i &lt; 5; i++) {
+        var r = instance_create(random_range(x - sprite_width / 2, x + sprite_width/2), random_range(y, y + sprite_height / 2 * _sign), obj_raindrop);
+        var xforce = lengthdir_x(5, mouse_x);
+        var yforce = lengthdir_y(5, mouse_y);
+        r.creator = id;
+        with (r) {
+            physics_apply_impulse(x + xforce, y + yforce, (mouse_x - x) * 15 + random_range(-5, 5), -(y - mouse_y) * 15 + random_range(-5, 5));
+        }
     }
+    energy -= 1;
+    alarm[0] = 6;
 }
-alarm[0] = 5;
+
 </string>
           </argument>
         </arguments>
@@ -138,55 +169,6 @@ if (phy_position_x + 3 &lt; room_width - sprite_width / 2) phy_position_x += 3;
             <kind>1</kind>
             <string>/// Move to left
 if (phy_position_x - 3 &gt; sprite_width / 2) phy_position_x -= 3;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="56">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///shooting false
-shooting = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="53">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Shooting true
-
-shooting = true;
 </string>
           </argument>
         </arguments>
