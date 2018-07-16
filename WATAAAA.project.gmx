@@ -21,6 +21,7 @@
     <object>objects\obj_skyscraper</object>
     <object>objects\obj_view</object>
     <object>objects\obj_raindrop</object>
+    <object>objects\obj_spawner</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>

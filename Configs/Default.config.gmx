@@ -224,6 +224,7 @@
     <option_fullscreen>false</option_fullscreen>
     <option_gameguid>{60B2E3C9-8EE9-4F86-B43D-90049C42A8C6}</option_gameguid>
     <option_gameid>240472068</option_gameid>
+    <option_haptic_effects>false</option_haptic_effects>
     <option_hasloadimage>false</option_hasloadimage>
     <option_helpkey>true</option_helpkey>
     <option_html5_CreationEventOrder>true</option_html5_CreationEventOrder>
@@ -281,6 +282,14 @@
     <option_ios_google_play_id></option_ios_google_play_id>
     <option_ios_google_tracking_id></option_ios_google_tracking_id>
     <option_ios_half_ipad1_textures>false</option_ios_half_ipad1_textures>
+    <option_ios_icon_114>Configs\Default\ios\icons\icon114.png</option_ios_icon_114>
+    <option_ios_icon_120>Configs\Default\ios\icons\icon120.png</option_ios_icon_120>
+    <option_ios_icon_144>Configs\Default\ios\icons\icon144.png</option_ios_icon_144>
+    <option_ios_icon_152>Configs\Default\ios\icons\icon152.png</option_ios_icon_152>
+    <option_ios_icon_167>Configs\Default\ios\icons\icon167.png</option_ios_icon_167>
+    <option_ios_icon_57>Configs\Default\ios\icons\icon57.png</option_ios_icon_57>
+    <option_ios_icon_72>Configs\Default\ios\icons\icon72.png</option_ios_icon_72>
+    <option_ios_icon_76>Configs\Default\ios\icons\icon76.png</option_ios_icon_76>
     <option_ios_icon_ipad_app_152>Configs\Default\ios\icons\app\ipad_152.png</option_ios_icon_ipad_app_152>
     <option_ios_icon_ipad_app_76>Configs\Default\ios\icons\app\ipad_76.png</option_ios_icon_ipad_app_76>
     <option_ios_icon_ipad_notification_20>Configs\Default\ios\icons\notification\ipad_20.png</option_ios_icon_ipad_notification_20>
@@ -396,12 +405,16 @@
     <option_noscreensaver>true</option_noscreensaver>
     <option_ouya_packaging>false</option_ouya_packaging>
     <option_priority>0</option_priority>
+    <option_ps3_build_version>0</option_ps3_build_version>
     <option_ps3_interpolate>true</option_ps3_interpolate>
+    <option_ps3_major_version>1</option_ps3_major_version>
+    <option_ps3_minor_version>0</option_ps3_minor_version>
     <option_ps3_nptitleid></option_ps3_nptitleid>
     <option_ps3_nptitlepassphrase></option_ps3_nptitlepassphrase>
     <option_ps3_nptitlesecret></option_ps3_nptitlesecret>
     <option_ps3_package_id>IV0002-NPXS00020_00-GAMEMAKERGAME001</option_ps3_package_id>
     <option_ps3_passcode>0xc0a3b3641c2ad1ef23153a48a3e12fe7</option_ps3_passcode>
+    <option_ps3_revision_version>0</option_ps3_revision_version>
     <option_ps3_scale>-1</option_ps3_scale>
     <option_ps3_texture_page>2048</option_ps3_texture_page>
     <option_ps3_version>01.00</option_ps3_version>

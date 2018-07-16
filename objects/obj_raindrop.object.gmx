@@ -33,6 +33,10 @@ angle = 0;
 xx = phy_position_x;
 yy = phy_position_y;
 phy_bullet = true;
+
+
+target_x = 0.0;
+target_y = 0.0;
 </string>
           </argument>
         </arguments>
@@ -86,6 +90,9 @@ if (phy_position_x &lt; 0 || phy_position_y &lt; 0 || phy_position_x &gt; room_w
     
 xx = phy_position_x;
 yy = phy_position_y;
+
+
+
 </string>
           </argument>
         </arguments>
