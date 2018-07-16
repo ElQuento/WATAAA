@@ -108,7 +108,7 @@ shooting = true;
           <argument>
             <kind>1</kind>
             <string>/// Shoot raindrops if left mouse button is pressed
-if (shooting &amp;&amp; mouse_check_button(mb_left) &amp;&amp; energy &gt;= 0) {
+if (shooting &amp;&amp; mouse_check_button(mb_left) &amp;&amp; energy &gt; 0) {
     shooting = false;
     _sign = 1;
     
@@ -116,6 +116,7 @@ if (shooting &amp;&amp; mouse_check_button(mb_left) &amp;&amp; energy &gt;= 0) {
     
     if (mouse_y &lt; y) _sign = -1;
     
+    // Create raindrops
     for (i = 0; i &lt; rain_count; i++) {
         var r = instance_create(random_range(x - sprite_width / 2, x + sprite_width/2), random_range(y, y + sprite_height / 2 * _sign), obj_raindrop);
         var xforce = lengthdir_x(1, mouse_x);
@@ -128,7 +129,7 @@ if (shooting &amp;&amp; mouse_check_button(mb_left) &amp;&amp; energy &gt;= 0) {
             physics_apply_impulse(x + xforce, y + yforce, (mouse_x - x) * 5 + random_range(-25, 25), -(y - mouse_y) * 5 + random_range(-25, 25));
         }
     }
-    //energy -= 1;
+    energy -= 1;
     alarm[0] = 10;
 }
 
@@ -181,6 +182,31 @@ if (phy_position_x + 3 &lt; room_width - sprite_width / 2) phy_position_x += 3;
             <kind>1</kind>
             <string>/// Move to left
 if (phy_position_x - 3 &gt; sprite_width / 2) phy_position_x -= 3;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="60">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Add energy (for testing purposes, delete later)
+
+energy += 5;
 </string>
           </argument>
         </arguments>
