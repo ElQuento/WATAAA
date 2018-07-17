@@ -11,6 +11,7 @@
     <sprite>sprites\spr_car</sprite>
     <sprite>sprites\spr_skyscraper</sprite>
     <sprite>sprites\spr_raindrop</sprite>
+    <sprite>sprites\StartButton</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -24,9 +25,11 @@
     <object>objects\obj_raindrop</object>
     <object>objects\obj_spawner</object>
     <object>objects\obj_control</object>
+    <object>objects\hud_startbutton</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
+    <room>rooms\rm_shop</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

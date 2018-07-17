@@ -40,7 +40,6 @@ alarm[1]  = car_stime;
 skyscraper_number = 0;
 skyscraper_max = 4;
 for(i = 0; i&lt;skyscraper_max;i++){
-    show_debug_message("test");
     instance_create(random_range(0,room_width), room_height-64 ,obj_skyscraper);
 }
 
