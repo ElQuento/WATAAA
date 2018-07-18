@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_enemy_parent</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -28,8 +28,6 @@
             <string>HP = 5;
 Drop_rate = 7;
 Point_rate = 10;
-
-event_inherited();
 </string>
           </argument>
         </arguments>
@@ -53,11 +51,14 @@ event_inherited();
           <argument>
             <kind>1</kind>
             <string>HP -= obj_raindrop.damage;
+with (other) instance_destroy();
 if(HP&lt;=0) {
-instance_destroy();
-obj_spawner.car_number --;
-obj_cloud.energy += Drop_rate;
-obj_cloud.points += Point_rate;
+    instance_destroy();
+    if (instance_exists(obj_cloud)) {
+        obj_spawner.car_number --;
+        obj_cloud.energy += Drop_rate;
+        obj_cloud.points += Point_rate;
+    }
 }
 </string>
           </argument>

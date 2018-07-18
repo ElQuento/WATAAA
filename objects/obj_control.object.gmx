@@ -32,6 +32,31 @@ view_wmax = 6400;
 view_hmax = 3600;
 
 level = 1;
+game_over = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Goto shop
+room_goto(rm_shop);
 </string>
           </argument>
         </arguments>
@@ -56,16 +81,37 @@ level = 1;
             <kind>1</kind>
             <string>/// Control stuff
 
+//Check for cloud
 if (instance_exists(obj_cloud)) {
+
+    // Adapt level
     level = floor(obj_cloud.energy / 10);
+    
+    // Adapt the view to the height
+    regulator = floor(obj_cloud.height / 10);
+    if (view_wview[0] &lt; view_wmin * regulator &amp;&amp; view_wview[0] &lt; view_wmax) view_wview[0] += 10;
+    else if (view_wview[0] &gt; view_wmin * regulator &amp;&amp; view_wview[0] &gt; view_wmin) view_wview[0] -= 10;
+    if (view_hview[0] &lt; view_hmin * regulator &amp;&amp; view_hview[0] &lt; view_hmax) view_hview[0] += 10;
+    else if (view_hview[0] &gt; view_hmin * regulator &amp;&amp; view_hview[0] &gt; view_hmin) view_hview[0] -= 10;
+    
+    // Game Over if energy is empty (this here should be checked LAST)
+    if (obj_cloud.energy &lt;= 0 &amp;&amp; !game_over) {
+        game_over = true;
+        instance_create(obj_cloud.x + 16, obj_cloud.y + 16, obj_game_over);
+        with (obj_cloud) instance_destroy();
+        alarm[0] = room_speed * 5;
+    }
+    
 }
+
+/*
 
 if(level &gt; 4){
     level = 4;
 }
 
 target_height = view_hmin;
-switch (obj_cloud.height/10){
+switch (floor(obj_cloud.energy / 10)){
 case 1: target_height = view_hmin * 1;
 case 2: target_height = view_hmin * 2;
 case 3: target_height = view_hmin * 3;
@@ -76,10 +122,8 @@ if(view_hview[0]&lt;target_height){
     view_wview[0] += 10;
     view_hview[0] += 10;
 }
-//if (view_wview[0] &lt; view_wmin * obj_cloud.height &amp;&amp; view_wview[0] &lt; view_wmax) view_wview[0] += 10;
-//else if (view_wview[0] &gt; view_wmin * obj_cloud.height &amp;&amp; view_wview[0] &gt; view_wmin) view_wview[0] -= 10;
-//if (view_hview[0] &lt; view_hmin * obj_cloud.height &amp;&amp; view_hview[0] &lt; view_hmax) view_hview[0] += 10;
-//else if (view_hview[0] &gt; view_hmin * obj_cloud.height &amp;&amp; view_hview[0] &gt; view_hmin) view_hview[0] -= 10;
+
+*/
 </string>
           </argument>
         </arguments>
@@ -102,10 +146,15 @@ if(view_hview[0]&lt;target_height){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_exists(obj_cloud) &amp;&amp; instance_exists(obj_view)) draw_text(obj_view.x - 16, obj_view.y - 120, "Energy: " + string(obj_cloud.energy));
-draw_text(obj_view.x - 16, obj_view.y - 100, "Level: " + string(obj_cloud.height));
-//draw_text(obj_view.x - 16, obj_view.y - 80, "View_w: " + string(view_wview[0]));
-//draw_text(obj_view.x - 16, obj_view.y - 60, "View_h: " + string(view_hview[0]));
+            <string>///Debug messages
+
+if (instance_exists(obj_cloud) &amp;&amp; instance_exists(obj_view)) {
+    draw_text(obj_view.x - 16, obj_view.y - 120, "Energy: " + string(obj_cloud.energy));
+    draw_text(obj_view.x - 16, obj_view.y - 100, "Level: " + string(level));
+    draw_text(obj_view.x - 16, obj_view.y -80, "Height: " + string(obj_cloud.height));
+}
+//draw_text(obj_view.x - 16, obj_view.y - 60, "View_w: " + string(view_wview[0]));
+//draw_text(obj_view.x - 16, obj_view.y - 40, "View_h: " + string(view_hview[0]));
 </string>
           </argument>
         </arguments>
