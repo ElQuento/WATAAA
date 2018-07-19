@@ -115,7 +115,6 @@ shooting = true;
 
 if((energy &lt; 1) &amp;&amp; (state=0))
 {
-
     state = 1;
     room_goto(rm_shop);
 }
@@ -151,6 +150,7 @@ if (shooting &amp;&amp; mouse_check_button(mb_left) &amp;&amp; energy &gt; 0) {
     //show_debug_message
     
     if (mouse_y &lt; y) _sign = -1;
+    
     
     // Create raindrops
     for (i = 0; i &lt; rain_count; i++) {
@@ -193,7 +193,12 @@ if (shooting &amp;&amp; mouse_check_button(mb_left) &amp;&amp; energy &gt; 0) {
           <argument>
             <kind>1</kind>
             <string>height++;
-if(height &gt; 100) height = 100;
+
+if(height &gt; 100){
+ height = 100;
+
+}
+
 </string>
           </argument>
         </arguments>
@@ -217,7 +222,11 @@ if(height &gt; 100) height = 100;
           <argument>
             <kind>1</kind>
             <string>height --;
-if(height &lt; 10) height=10;
+
+if(height &lt; 10){ 
+    height=10;
+
+}
 </string>
           </argument>
         </arguments>
