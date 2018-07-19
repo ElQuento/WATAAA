@@ -97,23 +97,46 @@ if (instance_exists(obj_cloud)) {
     
     if (view_wview[0] &lt; view_wmin * regulator &amp;&amp; view_wview[0] &lt; view_wmax) {
         view_wview[0] = view_wview[0] * scrollspeed;
+        view_hborder[0] *= scrollspeed;
         obj_cloud.image_xscale  = obj_cloud.image_xscale  * scrollspeed;
-        if (view_wview[0] &gt; view_wmin * regulator &amp;&amp; view_wview[0] &gt; view_wmin) view_wview[0] = view_wmin * regulator;
+        
+        if (view_wview[0] &gt; view_wmin * regulator &amp;&amp; view_wview[0] &gt; view_wmin) {
+            view_wview[0] = view_wmin * regulator;
+            view_hborder[0] = (view_wmin * regulator) / 2;
+        }
     }else if (view_wview[0] &gt; view_wmin * regulator &amp;&amp; view_wview[0] &gt; view_wmin){
         view_wview[0] = view_wview[0] * (2-scrollspeed);
+        view_hborder[0] *= (2 - scrollspeed);
         obj_cloud.image_xscale  = obj_cloud.image_xscale  * (2-scrollspeed);
-        if(view_wview[0] &lt; view_wmin * regulator &amp;&amp; view_wview[0] &lt; view_wmax) view_wview[0] = view_wmin * regulator;
+        
+        if(view_wview[0] &lt; view_wmin * regulator &amp;&amp; view_wview[0] &lt; view_wmax) {
+            view_wview[0] = view_wmin * regulator;
+            view_hborder[0] = (view_wmin * regulator) / 2;
+        }
     }
     if (view_hview[0] &lt; view_hmin * regulator &amp;&amp; view_hview[0] &lt; view_hmax){
         obj_cloud.image_yscale  = obj_cloud.image_yscale  * scrollspeed;
         view_hview[0] = view_hview[0]*scrollspeed;
-        if (view_hview[0] &gt; view_hmin * regulator &amp;&amp; view_hview[0] &gt; view_hmin) view_hview[0] = view_hmin * regulator;
+        
+        // Control cloud y position (TODO: improve)
+        if (obj_cloud.phy_position_y &gt; view_hmax - view_hmin * regulator + (obj_cloud.sprite_height / 2)) obj_cloud.phy_position_y -= (5 * regulator);
+        
+        if (view_hview[0] &gt; view_hmin * regulator &amp;&amp; view_hview[0] &gt; view_hmin) {
+            view_hview[0] = view_hmin * regulator;
+        }
      }else if (view_hview[0] &gt; view_hmin * regulator &amp;&amp; view_hview[0] &gt; view_hmin) {
         obj_cloud.image_yscale  = obj_cloud.image_yscale  * (2-scrollspeed);
         view_hview[0] = view_hview[0]*(2-scrollspeed);
-        if (view_hview[0] &lt; view_hmin * regulator &amp;&amp; view_hview[0] &lt; view_hmax) view_hview[0] = view_hmin * regulator;
+        
+        // Control cloud y position (TODO: improve)
+        if (obj_cloud.phy_position_y &lt; view_hmax - view_hmin * regulator + (obj_cloud.sprite_height / 2)) obj_cloud.phy_position_y += (5 * regulator);
+        
+        if (view_hview[0] &lt; view_hmin * regulator &amp;&amp; view_hview[0] &lt; view_hmax) {
+            view_hview[0] = view_hmin * regulator;
+        }
     }
     show_debug_message("X:"+string(view_wview[0])+" Y:" +string(view_hview[0]));
+    show_debug_message("Cloud_Y:" +string(obj_cloud.phy_position_y));
     
     
     // Game Over if energy is empty (this here should be checked LAST)
