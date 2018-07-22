@@ -41,7 +41,7 @@ alarm[2] = 2*meta_score.damage_time;
 state = 0;
 
 phy_position_x = 64;
-phy_position_y = 3600 - view_hview[0] + sprite_height / 2;
+phy_position_y = 3600 - view_hview[0] + sprite_height;
 </string>
           </argument>
         </arguments>

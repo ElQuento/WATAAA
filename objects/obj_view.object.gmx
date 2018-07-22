@@ -55,9 +55,9 @@ if (instance_exists(obj_cloud)) {
             <kind>1</kind>
             <string>/// Move 10% towards the player
 
-if (instance_exists(obj_cloud)) {
+if (instance_exists(obj_cloud) &amp;&amp; instance_exists(obj_control)) {
     x += (obj_cloud.x - x) * 0.1;
-    y += (obj_cloud.y + (360 * floor(obj_cloud.height / 10)) - (obj_cloud.sprite_height / 2) - y) * 0.1;
+    y += (obj_cloud.y + (360 * obj_control.regulator) - (obj_cloud.sprite_height / 2) - y) * 0.1;
 }
 </string>
           </argument>

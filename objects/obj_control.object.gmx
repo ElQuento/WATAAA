@@ -30,6 +30,7 @@ view_wmin = 640;
 view_hmin = 360;
 view_wmax = 6400;
 view_hmax = 3600;
+regulator = 1;
 
 level = 1;
 game_over = false;
@@ -83,59 +84,108 @@ room_goto(rm_shop);
 
 //Check for cloud
 if (instance_exists(obj_cloud)) {
-
-    // Adapt level
-    level = floor(obj_cloud.energy / 10);
     
     // Adapt the view to the height
-    regulator = floor(obj_cloud.height / 10);
+    step = floor(obj_cloud.height / 10);
     
-    //So Width and Height scroll with the same speed
-    scrollspeed = 1.01;
+    // Adapt level and regulator
+    switch (step){
+        case(1):
+            regulator = step;
+            level = 1;
+            break;
+        case(3):
+            regulator = step;
+            level = 2;
+            break;
+        case(7):
+            regulator = step;
+            level = 3;
+            break;
+        case(10):
+            regulator = step;
+            level = 4;
+            break;
+    }
     
-    
-    
+    // Check if current view width is smaller than target view width
     if (view_wview[0] &lt; view_wmin * regulator &amp;&amp; view_wview[0] &lt; view_wmax) {
-        view_wview[0] = view_wview[0] * scrollspeed;
-        view_hborder[0] *= scrollspeed;
-        obj_cloud.image_xscale  = obj_cloud.image_xscale  * scrollspeed;
+        view_wview[0] += (view_wmin / room_speed) * regulator;
+        view_hborder[0] += ((view_wmin / room_speed) * regulator) / 2;
+        obj_cloud.image_xscale  += (1 / room_speed) * regulator;
         
+        // Check if border is reached
         if (view_wview[0] &gt; view_wmin * regulator &amp;&amp; view_wview[0] &gt; view_wmin) {
             view_wview[0] = view_wmin * regulator;
             view_hborder[0] = (view_wmin * regulator) / 2;
+            obj_cloud.image_xscale = regulator;
         }
-    }else if (view_wview[0] &gt; view_wmin * regulator &amp;&amp; view_wview[0] &gt; view_wmin){
-        view_wview[0] = view_wview[0] * (2-scrollspeed);
-        view_hborder[0] *= (2 - scrollspeed);
-        obj_cloud.image_xscale  = obj_cloud.image_xscale  * (2-scrollspeed);
         
+    // Check if current view width is bigger than target view width
+    } else if (view_wview[0] &gt; view_wmin * regulator &amp;&amp; view_wview[0] &gt; view_wmin){
+        view_wview[0] -= (view_wmin / room_speed) * 5;
+        view_hborder[0] -= ((view_wmin / room_speed) * 5) / 2;
+        obj_cloud.image_xscale -= (1 / room_speed) * 5;
+        
+        // Check if border is reached
         if(view_wview[0] &lt; view_wmin * regulator &amp;&amp; view_wview[0] &lt; view_wmax) {
             view_wview[0] = view_wmin * regulator;
             view_hborder[0] = (view_wmin * regulator) / 2;
+            obj_cloud.image_xscale = regulator;
         }
     }
+    
+    // Check if current view height is smaller than target view height
     if (view_hview[0] &lt; view_hmin * regulator &amp;&amp; view_hview[0] &lt; view_hmax){
-        obj_cloud.image_yscale  = obj_cloud.image_yscale  * scrollspeed;
-        view_hview[0] = view_hview[0]*scrollspeed;
+        obj_cloud.image_yscale  += (1 / room_speed) * regulator;
+        view_hview[0] += (view_hmin / room_speed) * regulator;
         
-        // Control cloud y position (TODO: improve)
-        if (obj_cloud.phy_position_y &gt; view_hmax - view_hmin * regulator + (obj_cloud.sprite_height / 2)) obj_cloud.phy_position_y -= (5 * regulator);
-        
+        // Check if border is reached
         if (view_hview[0] &gt; view_hmin * regulator &amp;&amp; view_hview[0] &gt; view_hmin) {
             view_hview[0] = view_hmin * regulator;
+            obj_cloud.image_yscale = regulator;
         }
+        
+        // Control cloud position
+        if (obj_cloud.phy_position_y &gt; (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height))) {
+            obj_cloud.phy_position_y -= round(view_hmin / room_speed) * regulator;
+            obj_cloud.phy_position_x += round((view_wmin / room_speed) * regulator) / 2;
+            
+            // Check if border is reached
+            if (obj_cloud.phy_position_y &lt; (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height))) {
+                obj_cloud.phy_position_y = (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height));
+            }
+            
+        }
+        
+     // Check if current view height is bigger than target view height
      }else if (view_hview[0] &gt; view_hmin * regulator &amp;&amp; view_hview[0] &gt; view_hmin) {
-        obj_cloud.image_yscale  = obj_cloud.image_yscale  * (2-scrollspeed);
-        view_hview[0] = view_hview[0]*(2-scrollspeed);
+        obj_cloud.image_yscale -=  (1 / room_speed) * 5;
+        view_hview[0] -= (view_hmin / room_speed) * 5;
         
-        // Control cloud y position (TODO: improve)
-        if (obj_cloud.phy_position_y &lt; view_hmax - view_hmin * regulator + (obj_cloud.sprite_height / 2)) obj_cloud.phy_position_y += (5 * regulator);
-        
+         // Check if border is reached
         if (view_hview[0] &lt; view_hmin * regulator &amp;&amp; view_hview[0] &lt; view_hmax) {
             view_hview[0] = view_hmin * regulator;
+            obj_cloud.image_yscale = regulator;
         }
+        
+        // Control cloud position
+        if (obj_cloud.phy_position_y &lt; (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height))) {
+            obj_cloud.phy_position_y += round(view_hmin / room_speed) * 5;
+            obj_cloud.phy_position_x -= round((view_wmin / room_speed) * 5) / 2;
+            
+            // Check if border is reached
+            if (obj_cloud.phy_position_y &gt; (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height))) {
+                obj_cloud.phy_position_y = (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height));
+            }
+            
+         }
+         
     }
-    //show_debug_message("X:"+string(view_wview[0])+" Y:" +string(view_hview[0]));
+    show_debug_message("Cloud_X:"+string(obj_cloud.phy_position_x)+" Cloud_Y:" +string(obj_cloud.phy_position_y));
+    show_debug_message("View_X:"+string(obj_view.x)+" View_y:" +string(obj_view.y));
+    show_debug_message("View_W:"+string(view_wview[0])+" View_H:" +string(view_hview[0]));
+    show_debug_message("Cloud_W:"+string(obj_cloud.sprite_width) + " Cloud_H:" +string(obj_cloud.sprite_height));
     //show_debug_message("Cloud_Y:" +string(obj_cloud.phy_position_y));
     
     
