@@ -31,6 +31,8 @@ Point_rate = 1;
 Lvl = 2;
 Moving = 1;
 x_pathpoint = phy_position_x;
+image_index = 0;
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -57,7 +59,7 @@ x_pathpoint = phy_position_x;
    if (instance_exists(obj_cloud)) {
        obj_spawner.kid_number --;
        obj_cloud.energy += Drop_rate;
-       obj_cloud.points += Point_rate;
+       meta_score.points += Point_rate;
    }
 </string>
           </argument>
@@ -112,12 +114,15 @@ x_pathpoint = phy_position_x;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if((floor(obj_cloud.height/10)) &gt;= (Lvl-1)&amp;&amp;(floor(obj_cloud.height/10) &lt;= (Lvl+1)))
-    HP -= obj_raindrop.damage;
-with (other) instance_destroy();
-if(HP&lt;=0) {
-    Moving = 0
-    alarm[0]=120;
+            <string>if(instance_exists(obj_cloud)){
+    if((floor(obj_cloud.height/10)) &gt;= (Lvl-1)&amp;&amp;(floor(obj_cloud.height/10) &lt;= (Lvl+1)))
+        HP -= obj_raindrop.damage;
+    with (other) instance_destroy();
+    if(HP&lt;=0) {
+        image_index = 1;
+        Moving = 0
+        alarm[0]=120;
+    }
 }
 </string>
           </argument>
