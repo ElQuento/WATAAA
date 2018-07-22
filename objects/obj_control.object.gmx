@@ -135,8 +135,8 @@ if (instance_exists(obj_cloud)) {
             view_hview[0] = view_hmin * regulator;
         }
     }
-    show_debug_message("X:"+string(view_wview[0])+" Y:" +string(view_hview[0]));
-    show_debug_message("Cloud_Y:" +string(obj_cloud.phy_position_y));
+    //show_debug_message("X:"+string(view_wview[0])+" Y:" +string(view_hview[0]));
+    //show_debug_message("Cloud_Y:" +string(obj_cloud.phy_position_y));
     
     
     // Game Over if energy is empty (this here should be checked LAST)
