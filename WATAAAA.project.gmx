@@ -32,12 +32,13 @@
     <object>objects\obj_skyscraper</object>
     <object>objects\obj_view</object>
     <object>objects\obj_control</object>
-    <object>objects\hud_startbutton</object>
     <object>objects\obj_game_over</object>
+    <object>objects\hud_start_button</object>
+    <object>objects\hud_buy_button</object>
     <object>objects\hud_energybar</object>
     <object>objects\hud_height</object>
-    <object>objects\meta_score</object>
     <object>objects\hud_shop</object>
+    <object>objects\meta_score</object>
     <object>objects\meta_shop</object>
   </objects>
   <rooms name="rooms">

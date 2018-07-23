@@ -143,6 +143,8 @@ if (shooting &amp;&amp; mouse_check_button(mb_left) &amp;&amp; energy &gt; 0) {
         r.creator = id;
         r.target_x = mouse_x;
         r.target_y = mouse_y;
+        r.image_xscale = ceil(height/20);
+        r.image_yscale = ceil(height/20); 
         
         with (r) {
             physics_apply_impulse(x + xforce, y + yforce, (mouse_x - x) * 5 + random_range(-25, 25), (-(y - mouse_y) * 5 + random_range(-25, 25))*meta_score.rain_speed);

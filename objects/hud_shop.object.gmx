@@ -28,17 +28,29 @@
             <string>
 draw_text(30,30,"Points: " + string(meta_score.points));
 
-draw_text(30,60,"Max Energy: " + string(meta_score.max_energy) + " (" + string(meta_shop.Max_energy_saved) + "/" + string(meta_shop.Max_energy_cost)+")");
-draw_sprite(spr_buy_button,0,400,60);
+draw_text_transformed(30,60,"Max Energy: " + string(meta_score.max_energy) + " (" + string(meta_shop.Max_energy_saved) + "/" + string(meta_shop.Max_energy_cost)+")",1.5,1.5,0);
+var b1 = instance_create(600,70,hud_buy_button);
+b1.index = 0;
+b1.image_xscale = 2;
+b1.image_yscale = 2;
 
-draw_text(30,90,"Number of rain drops: " + string(meta_score.rain_count) + " (" + string(meta_shop.rain_count_saved) + "/" + string(meta_shop.rain_count_cost)+")");
-draw_sprite(spr_buy_button,0,400,90);
+draw_text_transformed(30,90,"Number of rain drops: " + string(meta_score.rain_count) + " (" + string(meta_shop.rain_count_saved) + "/" + string(meta_shop.rain_count_cost)+")",1.5,1.5,0);
+var b2 = instance_create(600,110,hud_buy_button);
+b2.index = 1;
+b2.image_xscale = 2;
+b2.image_yscale = 2;
 
-draw_text(30,120,"Drop speed: " + string(meta_score.rain_speed) + " (" + string(meta_shop.rain_speed_saved) + "/" + string(meta_shop.rain_speed_cost)+")");
-draw_sprite(spr_buy_button,0,400,120);
+draw_text_transformed(30,120,"Drop speed: " + string(meta_score.rain_speed) + " (" + string(meta_shop.rain_speed_saved) + "/" + string(meta_shop.rain_speed_cost)+")",1.5,1.5,0);
+var b3 = instance_create(600,150,hud_buy_button);
+b3.index = 2;
+b3.image_xscale = 2;
+b3.image_yscale = 2;
 
-draw_text(30,150,"Time between damage: " + string(meta_score.damage_time) + " (" + string(meta_shop.damage_time_saved) + "/" + string(meta_shop.damage_time_cost)+")");
-draw_sprite(spr_buy_button,0,400,150);
+draw_text_transformed(30,150,"Time between damage: " + string(meta_score.damage_time) + " (" + string(meta_shop.damage_time_saved) + "/" + string(meta_shop.damage_time_cost)+")",1.5,1.5,0);
+var b4 = instance_create(600,190,hud_buy_button);
+b4.index = 3;
+b4.image_xscale = 2;
+b4.image_yscale = 2;
 
 </string>
           </argument>
