@@ -23,7 +23,6 @@
   <objects name="objects">
     <object>objects\obj_cloud</object>
     <object>objects\obj_raindrop</object>
-    <object>objects\obj_spawner</object>
     <object>objects\obj_enemy</object>
     <object>objects\obj_busstop</object>
     <object>objects\obj_dog</object>
@@ -38,6 +37,7 @@
     <object>objects\hud_energybar</object>
     <object>objects\hud_height</object>
     <object>objects\hud_shop</object>
+    <object>objects\meta_spawner</object>
     <object>objects\meta_score</object>
     <object>objects\meta_shop</object>
   </objects>

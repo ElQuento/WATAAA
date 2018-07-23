@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -28,22 +28,22 @@
             <string>
 
 kid_number = 0;
-kid_max = 4;
+kid_max = 5;
 kid_stime = 5;
 alarm[0]  = kid_stime;
 
 car_number = 0;
-car_max = 5;
+car_max = 7;
 car_stime = 5;
 alarm[1]  = car_stime;
 
 skyscraper_number = 0;
-skyscraper_max = 4;
+skyscraper_max = 3;
 for(i = 0; i&lt;skyscraper_max;i++){
     instance_create(random_range(0,room_width), room_height-64 ,obj_skyscraper);
 }
 
-randomize();
+//randomize();
 
 
 
@@ -70,11 +70,13 @@ randomize();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(car_number &lt; car_max){
-    instance_create(random_range(0,room_width), room_height - 32 ,obj_car);
-    car_number++;
+            <string>if(instance_exists(obj_cloud)){
+    if(car_number &lt; car_max){
+        instance_create(random_range(0,room_width), room_height - 32 ,obj_car);
+        car_number++;
+    }
+    alarm[0] = car_stime;
 }
-alarm[0] = car_stime;
 </string>
           </argument>
         </arguments>
@@ -97,11 +99,13 @@ alarm[0] = car_stime;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(kid_number &lt; kid_max){
-    instance_create(random_range(0,room_width), room_height - 16 ,obj_kid);
-    kid_number ++;
+            <string>if(instance_exists(obj_cloud)){
+    if(kid_number &lt; kid_max){
+        instance_create(random_range(0,room_width), room_height - 16 ,obj_kid);
+        kid_number ++;
+    }
+    alarm[0] = kid_stime;
 }
-alarm[0] = kid_stime;
 </string>
           </argument>
         </arguments>

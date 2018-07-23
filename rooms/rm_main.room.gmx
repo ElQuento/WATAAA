@@ -54,7 +54,7 @@
     <instance objName="obj_view" x="32" y="32" name="inst_91B2C3C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="meta_score" x="224" y="32" name="inst_31BE90B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hud_energybar" x="192" y="32" name="inst_F7F62BEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spawner" x="96" y="32" name="inst_FA4AD7E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="meta_spawner" x="96" y="32" name="inst_FA4AD7E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_control" x="160" y="32" name="inst_69978EAA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="96" y="3488" name="inst_C1957566" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hud_height" x="256" y="32" name="inst_026B0A1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

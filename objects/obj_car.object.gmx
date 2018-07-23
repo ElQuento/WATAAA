@@ -31,6 +31,7 @@ Point_rate = 10;
 Lvl = 3;
 Moving = 1;
 x_pathpoint = phy_position_x;
+dead = false; 
 </string>
           </argument>
         </arguments>
@@ -55,9 +56,7 @@ x_pathpoint = phy_position_x;
             <kind>1</kind>
             <string>instance_destroy();
    if (instance_exists(obj_cloud)) {
-       obj_spawner.car_number --;
-       obj_cloud.energy += Drop_rate;
-       meta_score.points += Point_rate;
+       meta_spawner.car_number --;
    }
 </string>
           </argument>
@@ -117,8 +116,14 @@ x_pathpoint = phy_position_x;
         HP -= obj_raindrop.damage;
     with (other) instance_destroy();
     if(HP&lt;=0) {
-        Moving = 0
-        alarm[0]=120;
+        if(dead=false){
+            dead = true;
+            image_index = 1;
+            Moving = 0;
+            alarm[0]=120;
+            obj_cloud.energy += Drop_rate;
+            meta_score.points += Point_rate;
+        }
     }
 }
 </string>

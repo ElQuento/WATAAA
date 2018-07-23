@@ -38,6 +38,9 @@ shooting = true;
 alarm[0] = 1;
 alarm[2] = 2*meta_score.damage_time;
 
+meta_spawner.alarm[0] = 1;
+meta_spawner.alarm[1] = 1;
+
 state = 0;
 
 phy_position_x = 64;

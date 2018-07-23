@@ -49,6 +49,8 @@
           <argument>
             <kind>1</kind>
             <string>/// Go to new main room
+meta_score.energy = 10 + meta_score.points;
+meta_score.points = 0;
 room_goto(rm_main);
 </string>
           </argument>

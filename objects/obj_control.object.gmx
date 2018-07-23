@@ -57,6 +57,10 @@ game_over = false;
           <argument>
             <kind>1</kind>
             <string>// Goto shop
+meta_spawner.kid_number = 0;
+meta_spawner.car_number = 0;
+meta_spawner.skyscraper_number = 0;
+
 room_goto(rm_shop);
 </string>
           </argument>
@@ -182,10 +186,10 @@ if (instance_exists(obj_cloud)) {
          }
          
     }
-    show_debug_message("Cloud_X:"+string(obj_cloud.phy_position_x)+" Cloud_Y:" +string(obj_cloud.phy_position_y));
-    show_debug_message("View_X:"+string(obj_view.x)+" View_y:" +string(obj_view.y));
-    show_debug_message("View_W:"+string(view_wview[0])+" View_H:" +string(view_hview[0]));
-    show_debug_message("Cloud_W:"+string(obj_cloud.sprite_width) + " Cloud_H:" +string(obj_cloud.sprite_height));
+    //show_debug_message("Cloud_X:"+string(obj_cloud.phy_position_x)+" Cloud_Y:" +string(obj_cloud.phy_position_y));
+    //show_debug_message("View_X:"+string(obj_view.x)+" View_y:" +string(obj_view.y));
+    //show_debug_message("View_W:"+string(view_wview[0])+" View_H:" +string(view_hview[0]));
+    //show_debug_message("Cloud_W:"+string(obj_cloud.sprite_width) + " Cloud_H:" +string(obj_cloud.sprite_height));
     //show_debug_message("Cloud_Y:" +string(obj_cloud.phy_position_y));
     
     

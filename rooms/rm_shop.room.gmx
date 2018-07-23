@@ -54,7 +54,6 @@
     <instance objName="hud_start_button" x="512" y="640" name="inst_0945EE7D" locked="0" code="" scaleX="5" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="hud_shop" x="64" y="32" name="inst_4FF9AC2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="meta_shop" x="96" y="32" name="inst_4C48D6AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="meta_score" x="128" y="32" name="inst_F281B944" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
