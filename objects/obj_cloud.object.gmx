@@ -42,6 +42,8 @@ state = 0;
 
 phy_position_x = 64;
 phy_position_y = 3600 - view_hview[0] + sprite_height;
+
+image_speed = 0.5;
 </string>
           </argument>
         </arguments>

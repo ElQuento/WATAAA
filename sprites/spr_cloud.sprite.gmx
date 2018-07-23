@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>0</bbox_left>
-  <bbox_right>63</bbox_right>
-  <bbox_top>5</bbox_top>
-  <bbox_bottom>57</bbox_bottom>
+  <bbox_left>5</bbox_left>
+  <bbox_right>57</bbox_right>
+  <bbox_top>11</bbox_top>
+  <bbox_bottom>59</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -21,5 +21,24 @@
   <height>64</height>
   <frames>
     <frame index="0">images\spr_cloud_0.png</frame>
+    <frame index="1">images\spr_cloud_1.png</frame>
+    <frame index="2">images\spr_cloud_2.png</frame>
+    <frame index="3">images\spr_cloud_3.png</frame>
+    <frame index="4">images\spr_cloud_4.png</frame>
+    <frame index="5">images\spr_cloud_5.png</frame>
+    <frame index="6">images\spr_cloud_6.png</frame>
+    <frame index="7">images\spr_cloud_7.png</frame>
+    <frame index="8">images\spr_cloud_8.png</frame>
+    <frame index="9">images\spr_cloud_9.png</frame>
+    <frame index="10">images\spr_cloud_10.png</frame>
+    <frame index="11">images\spr_cloud_11.png</frame>
+    <frame index="12">images\spr_cloud_12.png</frame>
+    <frame index="13">images\spr_cloud_13.png</frame>
+    <frame index="14">images\spr_cloud_14.png</frame>
+    <frame index="15">images\spr_cloud_15.png</frame>
+    <frame index="16">images\spr_cloud_16.png</frame>
+    <frame index="17">images\spr_cloud_17.png</frame>
+    <frame index="18">images\spr_cloud_18.png</frame>
+    <frame index="19">images\spr_cloud_19.png</frame>
   </frames>
 </sprite>
