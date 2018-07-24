@@ -17,6 +17,7 @@
     <sprite>sprites\spr_buy_button</sprite>
     <sprite>sprites\spr_game_over</sprite>
     <sprite>sprites\spr_h_Scale</sprite>
+    <sprite>sprites\spr_kid_start</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

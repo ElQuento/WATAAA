@@ -40,7 +40,7 @@ alarm[1]  = car_stime;
 skyscraper_number = 0;
 skyscraper_max = 3;
 for(i = 0; i&lt;skyscraper_max;i++){
-    instance_create(random_range(0,room_width), room_height-64 ,obj_skyscraper);
+    instance_create(random_range(0,room_width), room_height-128 ,obj_skyscraper);
 }
 
 //randomize();
@@ -101,7 +101,7 @@ for(i = 0; i&lt;skyscraper_max;i++){
             <kind>1</kind>
             <string>if(instance_exists(obj_cloud)){
     if(kid_number &lt; kid_max){
-        instance_create(random_range(0,room_width), room_height - 16 ,obj_kid);
+        instance_create(random_range(0,room_width), room_height - 32, obj_kid);
         kid_number ++;
     }
     alarm[0] = kid_stime;
