@@ -30,8 +30,10 @@ Drop_rate = 7;
 Point_rate = 10;
 Lvl = 3;
 Moving = 1;
-x_pathpoint = phy_position_x;
-dead = false; 
+image_speed = 0;
+step = choose(-5, 5);
+if (step == 5) image_xscale = -1;
+dead = false;
 </string>
           </argument>
         </arguments>
@@ -81,13 +83,7 @@ dead = false;
           <argument>
             <kind>1</kind>
             <string>if(Moving == 1){
-    if(floor(phy_position_x) = floor(x_pathpoint)){
-        x_pathpoint = floor(random_range(0,room_width));
-    }else if(phy_position_x&lt;x_pathpoint){
-        phy_position_x = phy_position_x+2;
-    }else if(phy_position_x&gt;x_pathpoint){
-        phy_position_x--;
-    }
+    phy_position_x += step;
 }
 </string>
           </argument>
@@ -144,9 +140,9 @@ dead = false;
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>0,32</point>
-    <point>56,32</point>
-    <point>56,64</point>
-    <point>0,64</point>
+    <point>80,64</point>
+    <point>176,64</point>
+    <point>176,96</point>
+    <point>80,96</point>
   </PhysicsShapePoints>
 </object>
