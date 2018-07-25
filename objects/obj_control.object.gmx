@@ -151,13 +151,13 @@ if (instance_exists(obj_cloud)) {
         }
         
         // Control cloud position
-        if (obj_cloud.phy_position_y &gt; (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height))) {
+        if (obj_cloud.phy_position_y &gt; (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height / 2))) {
             obj_cloud.phy_position_y -= round(view_hmin / room_speed) * regulator;
             //obj_cloud.phy_position_x += round((view_wmin / room_speed) * regulator) / 2;
             
             // Check if border is reached
-            if (obj_cloud.phy_position_y &lt; (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height))) {
-                obj_cloud.phy_position_y = (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height));
+            if (obj_cloud.phy_position_y &lt; (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height / 2))) {
+                obj_cloud.phy_position_y = (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height / 2));
             }
             
         }
@@ -174,13 +174,13 @@ if (instance_exists(obj_cloud)) {
         }
         
         // Control cloud position
-        if (obj_cloud.phy_position_y &lt; (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height))) {
+        if (obj_cloud.phy_position_y &lt; (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height / 2))) {
             obj_cloud.phy_position_y += round(view_hmin / room_speed) * 5;
             //obj_cloud.phy_position_x -= round((view_wmin / room_speed) * 5) / 2;
             
             // Check if border is reached
-            if (obj_cloud.phy_position_y &gt; (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height))) {
-                obj_cloud.phy_position_y = (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height));
+            if (obj_cloud.phy_position_y &gt; (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height / 2))) {
+                obj_cloud.phy_position_y = (view_hmax - view_hmin * regulator + round(obj_cloud.sprite_height / 2));
             }
             
          }

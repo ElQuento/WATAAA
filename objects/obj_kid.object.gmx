@@ -3,7 +3,7 @@
   <spriteName>spr_kid_start</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>1</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -192,9 +192,9 @@ if (step != 0) image_xscale = step * -1;
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>36,32</point>
-    <point>20,32</point>
-    <point>20,24</point>
-    <point>36,24</point>
+    <point>44,40</point>
+    <point>12,40</point>
+    <point>12,24</point>
+    <point>44,24</point>
   </PhysicsShapePoints>
 </object>

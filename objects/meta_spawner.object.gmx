@@ -72,7 +72,7 @@ for(i = 0; i&lt;skyscraper_max;i++){
             <kind>1</kind>
             <string>if(instance_exists(obj_cloud)){
     if(car_number &lt; car_max){
-        instance_create(random_range(0,room_width), room_height - 64 ,obj_car);
+        instance_create(random_range(0,room_width), room_height - 64 -choose(20, 68) ,obj_car);
         car_number++;
     }
     alarm[0] = car_stime;
@@ -101,7 +101,7 @@ for(i = 0; i&lt;skyscraper_max;i++){
             <kind>1</kind>
             <string>if(instance_exists(obj_cloud)){
     if(kid_number &lt; kid_max){
-        instance_create(random_range(0,room_width), room_height - 32, obj_kid);
+        instance_create(random_range(0,room_width), room_height - 32 - choose(4, 116), obj_kid);
         kid_number ++;
     }
     alarm[0] = kid_stime;

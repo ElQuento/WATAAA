@@ -18,6 +18,7 @@
     <sprite>sprites\spr_game_over</sprite>
     <sprite>sprites\spr_h_Scale</sprite>
     <sprite>sprites\spr_kid_start</sprite>
+    <sprite>sprites\spr_street</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -41,6 +42,7 @@
     <object>objects\meta_spawner</object>
     <object>objects\meta_score</object>
     <object>objects\meta_shop</object>
+    <object>objects\obj_street</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>

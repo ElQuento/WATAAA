@@ -43,8 +43,8 @@ meta_spawner.alarm[1] = 1;
 
 state = 0;
 
-phy_position_x = 64;
-phy_position_y = 3600 - view_hview[0] + sprite_height;
+phy_position_x = 96;
+phy_position_y = 3600 - view_hview[0] + sprite_height / 2;
 
 image_speed = 0.5;
 </string>
@@ -157,6 +157,10 @@ if (shooting &amp;&amp; mouse_check_button(mb_left) &amp;&amp; energy &gt; 0) {
     }
     energy -= 1;
     alarm[0] = 10;
+}
+
+if (instance_exists(meta_score)) {
+    image_alpha = energy / meta_score.max_energy;
 }
 
 
