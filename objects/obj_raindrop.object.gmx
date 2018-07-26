@@ -38,7 +38,7 @@ phy_bullet = true;
 target_x = 0.0;
 target_y = 0.0;
 
-damage = 1;
+
 </string>
           </argument>
         </arguments>

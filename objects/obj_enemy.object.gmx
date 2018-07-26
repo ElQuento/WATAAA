@@ -34,6 +34,8 @@ x_pathpoint = phy_position_x;
 //index: 0: alive, 1: dead, 2: protected
 image_index = 0;
 image_speed = 0;
+
+dead = false;
 </string>
           </argument>
         </arguments>
@@ -59,8 +61,6 @@ image_speed = 0;
             <string>instance_destroy();
    if (instance_exists(obj_cloud)) {
        obj_spawner._number --;
-       obj_cloud.energy += Drop_rate;
-       obj_cloud.points += Point_rate;
    }
 </string>
           </argument>
@@ -117,15 +117,22 @@ if(Moving == 1){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//only damage if height is between lvl +-1
-if((floor(obj_cloud.height/10)) &gt;= (Lvl-1)&amp;&amp;(floor(obj_cloud.height/10) &lt;= (Lvl+1)))
-    HP -= obj_raindrop.damage;
-else image_index = 2;
-with (other) instance_destroy();
-if(HP&lt;=0) {
-    image_index = 1;
-    Moving = 0
-    alarm[0]=120;
+            <string>if(instance_exists(obj_cloud)){
+    //only damage if height is between lvl +-1
+    if((floor(obj_cloud.height/10)) &gt;= (Lvl-1)&amp;&amp;(floor(obj_cloud.height/10) &lt;= (Lvl+1)))
+        HP -= obj_raindrop.damage;
+    else image_index = 2;
+    with (other) instance_destroy();
+    if(HP&lt;=0) {
+        if(dead == false){
+            dead = true;
+            obj_cloud.energy += Drop_rate;
+            meta_score.points += Point_rate;
+            image_index = 1;
+            Moving = 0
+            alarm[0]=120;
+        }
+    }
 }
 </string>
           </argument>

@@ -108,6 +108,8 @@
     <instance objName="obj_street" x="6080" y="3536" name="inst_FE3EA9D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="6208" y="3536" name="inst_D069D639" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="6336" y="3536" name="inst_8EDDCF49" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_damn" x="5568" y="320" name="inst_393EFF9A" locked="0" code="" scaleX="13.2063493728638" scaleY="10.3322887420654" colour="4294967295" rotation="0"/>
+    <instance objName="meta_sound" x="288" y="32" name="inst_DE8CE0C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

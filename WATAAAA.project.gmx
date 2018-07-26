@@ -5,7 +5,10 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\sound0</sound>
+    <sound>sound\snd_part_one</sound>
+    <sound>sound\snd_part_two</sound>
+    <sound>sound\snd_part_three</sound>
+    <sound>sound\snd_part_four</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_cloud</sprite>
@@ -19,6 +22,7 @@
     <sprite>sprites\spr_h_Scale</sprite>
     <sprite>sprites\spr_kid_start</sprite>
     <sprite>sprites\spr_street</sprite>
+    <sprite>sprites\spr_damn</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -26,6 +30,7 @@
     <object>objects\obj_cloud</object>
     <object>objects\obj_raindrop</object>
     <object>objects\obj_enemy</object>
+    <object>objects\obj_damn</object>
     <object>objects\obj_busstop</object>
     <object>objects\obj_dog</object>
     <object>objects\obj_kid</object>
@@ -43,6 +48,7 @@
     <object>objects\meta_score</object>
     <object>objects\meta_shop</object>
     <object>objects\obj_street</object>
+    <object>objects\meta_sound</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>

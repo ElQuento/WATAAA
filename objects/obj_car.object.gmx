@@ -109,7 +109,7 @@ dead = false;
             <kind>1</kind>
             <string>if(instance_exists(obj_cloud)){
     if((floor(obj_cloud.height/10)) &gt;= (Lvl-1)&amp;&amp;(floor(obj_cloud.height/10) &lt;= (Lvl+1)))
-        HP -= obj_raindrop.damage;
+        HP -= obj_cloud.damage;
     with (other) instance_destroy();
     if(HP&lt;=0) {
         if(dead=false){

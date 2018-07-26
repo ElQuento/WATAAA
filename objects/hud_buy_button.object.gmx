@@ -171,7 +171,7 @@ if(meta_score.points &gt; 0){
             if(meta_shop.kid_number_saved == meta_shop.kid_number_cost){
                 meta_shop.kid_number_lvl ++;
                 meta_spawner.kid_max ++;
-                meta_shop.kid_number_cost = meta_shop.kid_number_cost + 15*meta_shop.kid_number_cost;
+                meta_shop.kid_number_cost = meta_shop.kid_number_cost + 15*meta_shop.kid_number_lvl;
                 meta_shop.kid_number_saved = 0;
                 if(meta_shop.kid_number_lvl == 6){
                     meta_shop.kid_number_cost = 0;
