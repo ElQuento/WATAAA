@@ -117,12 +117,14 @@ if (instance_exists(obj_cloud)) {
         view_wview[0] += (view_wmin / room_speed) * regulator;
         view_hborder[0] += ((view_wmin / room_speed) * regulator) / 2;
         obj_cloud.image_xscale  += (1 / room_speed) * regulator;
+        if (instance_exists(obj_cursor)) obj_cursor.image_xscale += (1 / room_speed) * regulator;
         
         // Check if border is reached
         if (view_wview[0] &gt; view_wmin * regulator &amp;&amp; view_wview[0] &gt; view_wmin) {
             view_wview[0] = view_wmin * regulator;
             view_hborder[0] = (view_wmin * regulator) / 2;
             obj_cloud.image_xscale = regulator;
+            if (instance_exists(obj_cursor)) obj_cursor.image_xscale = regulator;
         }
         
     // Check if current view width is bigger than target view width
@@ -130,24 +132,28 @@ if (instance_exists(obj_cloud)) {
         view_wview[0] -= (view_wmin / room_speed) * 5;
         view_hborder[0] -= ((view_wmin / room_speed) * 5) / 2;
         obj_cloud.image_xscale -= (1 / room_speed) * 5;
+        if (instance_exists(obj_cursor)) obj_cursor.image_xscale -= (1 / room_speed) * 5;
         
         // Check if border is reached
         if(view_wview[0] &lt; view_wmin * regulator &amp;&amp; view_wview[0] &lt; view_wmax) {
             view_wview[0] = view_wmin * regulator;
             view_hborder[0] = (view_wmin * regulator) / 2;
             obj_cloud.image_xscale = regulator;
+            if (instance_exists(obj_cursor)) obj_cursor.image_xscale = regulator;
         }
     }
     
     // Check if current view height is smaller than target view height
     if (view_hview[0] &lt; view_hmin * regulator &amp;&amp; view_hview[0] &lt; view_hmax){
         obj_cloud.image_yscale  += (1 / room_speed) * regulator;
+        if (instance_exists(obj_cursor)) obj_cursor.image_yscale += (1 / room_speed) * regulator;
         view_hview[0] += (view_hmin / room_speed) * regulator;
         
         // Check if border is reached
         if (view_hview[0] &gt; view_hmin * regulator &amp;&amp; view_hview[0] &gt; view_hmin) {
             view_hview[0] = view_hmin * regulator;
             obj_cloud.image_yscale = regulator;
+            if (instance_exists(obj_cursor)) obj_cursor.image_yscale = regulator;
         }
         
         // Control cloud position
@@ -165,12 +171,14 @@ if (instance_exists(obj_cloud)) {
      // Check if current view height is bigger than target view height
      }else if (view_hview[0] &gt; view_hmin * regulator &amp;&amp; view_hview[0] &gt; view_hmin) {
         obj_cloud.image_yscale -=  (1 / room_speed) * 5;
+        if (instance_exists(obj_cursor)) obj_cursor.image_yscale -= (1 / room_speed) * 5;
         view_hview[0] -= (view_hmin / room_speed) * 5;
         
          // Check if border is reached
         if (view_hview[0] &lt; view_hmin * regulator &amp;&amp; view_hview[0] &lt; view_hmax) {
             view_hview[0] = view_hmin * regulator;
             obj_cloud.image_yscale = regulator;
+            if (instance_exists(obj_cursor)) obj_cursor.image_yscale = regulator;
         }
         
         // Control cloud position
@@ -196,7 +204,12 @@ if (instance_exists(obj_cloud)) {
     // Game Over if energy is empty (this here should be checked LAST)
     if (obj_cloud.energy &lt;= 0 &amp;&amp; !game_over) {
         game_over = true;
-        instance_create(obj_cloud.x + 16, obj_cloud.y + 16, obj_game_over);
+        var noob = instance_create(obj_cloud.x, 3856, obj_game_over);
+        noob.image_xscale = regulator;
+        noob.image_yscale = regulator;
+        noob.s = regulator;
+        noob.yy = obj_cloud.y + 64 * regulator;
+        noob.x = obj_view.x + view_wview[0] / 2;
         with (obj_cloud) instance_destroy();
         alarm[0] = room_speed * 5;
     }

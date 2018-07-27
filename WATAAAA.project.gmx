@@ -23,6 +23,10 @@
     <sprite>sprites\spr_kid_start</sprite>
     <sprite>sprites\spr_street</sprite>
     <sprite>sprites\spr_damn</sprite>
+    <sprite>sprites\spr_bg_cloud1</sprite>
+    <sprite>sprites\spr_bg_cloud2</sprite>
+    <sprite>sprites\spr_bg_cloud3</sprite>
+    <sprite>sprites\spr_cursor</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -49,6 +53,8 @@
     <object>objects\meta_shop</object>
     <object>objects\obj_street</object>
     <object>objects\meta_sound</object>
+    <object>objects\obj_bg_cloud</object>
+    <object>objects\obj_cursor</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>

@@ -8,7 +8,7 @@
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
-  <colour>16777090</colour>
+  <colour>16695067</colour>
   <showcolour>-1</showcolour>
   <code></code>
   <enableViews>-1</enableViews>
@@ -108,8 +108,22 @@
     <instance objName="obj_street" x="6080" y="3536" name="inst_FE3EA9D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="6208" y="3536" name="inst_D069D639" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="6336" y="3536" name="inst_8EDDCF49" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_damn" x="5568" y="320" name="inst_393EFF9A" locked="0" code="" scaleX="13.2063493728638" scaleY="10.3322887420654" colour="4294967295" rotation="0"/>
     <instance objName="meta_sound" x="288" y="32" name="inst_DE8CE0C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bg_cloud" x="1504" y="3072" name="inst_44BFE170" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bg_cloud" x="5088" y="3168" name="inst_55D5E260" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bg_cloud" x="3264" y="3232" name="inst_3A499D6A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bg_cloud" x="832" y="608" name="inst_93F81106" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bg_cloud" x="5216" y="1888" name="inst_F953431B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bg_cloud" x="3584" y="544" name="inst_B73676B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bg_cloud" x="480" y="2752" name="inst_453D750B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bg_cloud" x="3904" y="2560" name="inst_DF74A40E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bg_cloud" x="1696" y="1856" name="inst_050753C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bg_cloud" x="3328" y="1696" name="inst_3C4A7AF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bg_cloud" x="4992" y="768" name="inst_2A207221" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bg_cloud" x="2176" y="768" name="inst_A4093797" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bg_cloud" x="6048" y="192" name="inst_CA8FE1AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bg_cloud" x="5536" y="2624" name="inst_A2FA3A0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_damn" x="6080" y="1800" name="inst_B19545D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>
