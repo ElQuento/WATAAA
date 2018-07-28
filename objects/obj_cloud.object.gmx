@@ -45,7 +45,9 @@ state = 0;
 
 phy_position_x = 96;
 phy_position_y = 3600 - view_hview[0] + sprite_height / 2;
-
+if (instance_exists(meta_score)) {
+    if (meta_score.evil == 1) sprite_index = spr_cloud_evil;
+}
 image_speed = 0.5;
 
 damage = 1;

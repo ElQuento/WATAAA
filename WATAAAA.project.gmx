@@ -9,6 +9,7 @@
     <sound>sound\snd_part_two</sound>
     <sound>sound\snd_part_three</sound>
     <sound>sound\snd_part_four</sound>
+    <sound>sound\snd_song</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_cloud</sprite>
@@ -28,6 +29,7 @@
     <sprite>sprites\spr_bg_cloud3</sprite>
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_title</sprite>
+    <sprite>sprites\spr_cloud_evil</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -45,6 +47,7 @@
     <object>objects\obj_control</object>
     <object>objects\obj_game_over</object>
     <object>objects\hud_start_button</object>
+    <object>objects\hud_start_first_game</object>
     <object>objects\hud_buy_button</object>
     <object>objects\hud_energybar</object>
     <object>objects\hud_height</object>
@@ -59,9 +62,9 @@
     <object>objects\obj_title</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_title</room>
     <room>rooms\rm_main</room>
     <room>rooms\rm_shop</room>
-    <room>rooms\rm_title</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

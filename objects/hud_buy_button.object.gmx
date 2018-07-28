@@ -231,7 +231,7 @@ if(meta_score.points &gt; 0){
             meta_score.points--;
             if(meta_shop.evil_saved == meta_shop.evil_cost){
                 meta_shop.evil_lvl ++;
-                evil++;
+                if (instance_exists(meta_score)) meta_score.evil++;
                 meta_shop.evil_cost = 0;
             }
         }

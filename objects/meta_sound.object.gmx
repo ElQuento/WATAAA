@@ -72,7 +72,7 @@ alarm[0] = 14*60;
         audio_play_sound(0,1,0);
     }
 }
-alarm[0] = 14*60;
+alarm[0] = audio_sound_length(0)*60;
 </string>
           </argument>
         </arguments>

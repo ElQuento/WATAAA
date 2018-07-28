@@ -37,12 +37,13 @@ car_max = 12;
 car_stime = 5;
 alarm[1]  = car_stime;
 
+/*
 skyscraper_number = 0;
 skyscraper_max = 5;
 for(i = 0; i&lt;skyscraper_max;i++){
     instance_create(random_range(0,room_width), room_height-128 ,obj_skyscraper);
 }
-
+*/
 randomize();
 
 

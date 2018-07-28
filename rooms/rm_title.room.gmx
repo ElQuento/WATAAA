@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_title" x="512" y="384" name="inst_6F82899A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hud_start_first_game" x="736" y="704" name="inst_55731DB6" locked="0" code="" scaleX="6.5" scaleY="6.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -214,7 +214,8 @@ if (instance_exists(obj_cloud)) {
         noob.image_yscale = regulator;
         noob.s = regulator;
         noob.yy = obj_cloud.y + 64 * regulator;
-        noob.x = obj_view.x + view_wview[0] / 2;
+        //noob.x = view_wview[0] / 2;
+        noob.x = obj_cloud.x;
         with (obj_cloud) instance_destroy();
         alarm[0] = room_speed * 5;
     }
