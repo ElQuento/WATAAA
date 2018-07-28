@@ -70,7 +70,7 @@ b8.image_yscale = 2;
 
 
 
-var b9 = instance_create(600,490,hud_buy_button);
+var b9 = instance_create(600,440,hud_buy_button);
 b9.button_index = 9;
 b9.image_xscale = 2;
 b9.image_yscale = 2;

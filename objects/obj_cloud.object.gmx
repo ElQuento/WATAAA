@@ -302,8 +302,8 @@ if (phy_position_x - 3 &gt; sprite_width / 2)
             <kind>1</kind>
             <string>/// Add energy (for testing purposes, delete later)
 
-energy += 5;
-meta_score.points +=5;
+//energy += 5;
+//meta_score.points +=5;
 </string>
           </argument>
         </arguments>

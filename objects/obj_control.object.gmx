@@ -265,12 +265,13 @@ if(view_hview[0]&lt;target_height){
           <argument>
             <kind>1</kind>
             <string>///Debug messages
-
+/*
 if (instance_exists(obj_cloud) &amp;&amp; instance_exists(obj_view)) {
     draw_text(16, 120, "Energy: " + string(obj_cloud.energy));
     draw_text(16, 100, "Level: " + string(level));
     draw_text(16, 80, "Height: " + string(obj_cloud.height));
 }
+*/
 //draw_text(obj_view.x - 16, obj_view.y - 60, "View_w: " + string(view_wview[0]));
 //draw_text(obj_view.x - 16, obj_view.y - 40, "View_h: " + string(view_hview[0]));
 </string>
