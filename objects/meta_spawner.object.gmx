@@ -28,22 +28,22 @@
             <string>
 
 kid_number = 0;
-kid_max = 5;
+kid_max = 15;
 kid_stime = 5;
 alarm[0]  = kid_stime;
 
 car_number = 0;
-car_max = 7;
+car_max = 12;
 car_stime = 5;
 alarm[1]  = car_stime;
 
 skyscraper_number = 0;
-skyscraper_max = 3;
+skyscraper_max = 5;
 for(i = 0; i&lt;skyscraper_max;i++){
     instance_create(random_range(0,room_width), room_height-128 ,obj_skyscraper);
 }
 
-//randomize();
+randomize();
 
 
 
@@ -75,7 +75,7 @@ for(i = 0; i&lt;skyscraper_max;i++){
         instance_create(random_range(0,room_width), room_height - 64 -choose(20, 68) ,obj_car);
         car_number++;
     }
-    alarm[0] = car_stime;
+    alarm[1] = car_stime;
 }
 </string>
           </argument>

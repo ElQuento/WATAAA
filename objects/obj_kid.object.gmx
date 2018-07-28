@@ -105,6 +105,9 @@ image_speed = -1;
             <kind>1</kind>
             <string>phy_position_x += step;
 if (step != 0) image_xscale = step * -1;
+if((phy_position_x&lt;0)||(phy_position_x&gt;room_width)){
+    alarm[0]=1;
+}
 </string>
           </argument>
         </arguments>

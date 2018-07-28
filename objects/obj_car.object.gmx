@@ -39,6 +39,30 @@ dead = false;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>step = choose (-1, 1);
+alarm[1] = random_range(room_speed, room_speed * 3);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
@@ -82,8 +106,11 @@ dead = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(Moving == 1){
-    phy_position_x += step;
+            <string>phy_position_x += step;
+if (step &gt; 0) image_xscale = -1;
+if (step &lt; 0) image_xscale = 1;
+if((phy_position_x&lt;0)||(phy_position_x&gt;room_width)){
+    alarm[0]=1;
 }
 </string>
           </argument>

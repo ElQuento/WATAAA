@@ -200,7 +200,7 @@ if(meta_score.points &gt; 0){
             meta_score.points--;
             if(meta_shop.kid_number_saved == meta_shop.kid_number_cost){
                 meta_shop.kid_number_lvl ++;
-                meta_spawner.kid_max ++;
+                meta_spawner.kid_max +=5;
                 meta_shop.kid_number_cost = meta_shop.kid_number_cost + 10*meta_shop.kid_number_lvl;
                 meta_shop.kid_number_saved = 0;
                 if(meta_shop.kid_number_lvl == 6){
@@ -215,7 +215,7 @@ if(meta_score.points &gt; 0){
             meta_score.points--;
             if(meta_shop.car_number_saved == meta_shop.car_number_cost){
                 meta_shop.car_number_lvl ++;
-                meta_spawner.car_max ++;
+                meta_spawner.car_max +=3;
                 meta_shop.car_number_cost = meta_shop.car_number_cost + 10*meta_shop.car_number_lvl;
                 meta_shop.car_number_saved = 0;
                 if(meta_shop.car_number_lvl == 6){

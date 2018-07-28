@@ -122,7 +122,7 @@ draw_text_transformed(30,320,"Car Max: " + string(meta_spawner.car_max) + " (" +
 draw_text_transformed(30,380,"Absolute Evilness " + string(meta_shop.evil_lvl) + " (" + string(meta_shop.evil_saved) + "/" + string(meta_shop.evil_cost)+")",1.5,1.5,0);
 
 
-draw_text_transformed(250,550,"Start with " + string(meta_score.points+10) + " energy",1.5,1.5,0);
+draw_text_transformed(250,550,"Start with " + string(meta_score.points+meta_score.start_energy) + " energy",1.5,1.5,0);
 
 </string>
           </argument>
