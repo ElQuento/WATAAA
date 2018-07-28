@@ -45,15 +45,36 @@ b4.button_index = 4;
 b4.image_xscale = 2;
 b4.image_yscale = 2;
 
-var b5 = instance_create(600,250,hud_buy_button);
+var b5 = instance_create(600,230,hud_buy_button);
 b5.button_index = 5;
 b5.image_xscale = 2;
 b5.image_yscale = 2;
 
-var b6 = instance_create(600,290,hud_buy_button);
+var b6 = instance_create(600,270,hud_buy_button);
 b6.button_index = 6;
 b6.image_xscale = 2;
 b6.image_yscale = 2;
+
+
+
+var b7 = instance_create(600,350,hud_buy_button);
+b7.button_index = 7;
+b7.image_xscale = 2;
+b7.image_yscale = 2;
+
+var b8 = instance_create(600,390,hud_buy_button);
+b8.button_index = 8;
+b8.image_xscale = 2;
+b8.image_yscale = 2;
+
+
+
+
+var b9 = instance_create(600,490,hud_buy_button);
+b9.button_index = 9;
+b9.image_xscale = 2;
+b9.image_yscale = 2;
+
 
 </string>
           </argument>
@@ -80,19 +101,28 @@ b6.image_yscale = 2;
             <string>
 draw_text(30,30,"Points: " + string(meta_score.points));
 
-draw_text_transformed(30,60,"Max Energy: " + string(meta_score.max_energy) + " (" + string(meta_shop.Max_energy_saved) + "/" + string(meta_shop.Max_energy_cost)+")",1.5,1.5,0);
+draw_text_transformed(30,60,"Start Energy: " + string(meta_score.start_energy) + " (" + string(meta_shop.start_energy_saved) + "/" + string(meta_shop.start_energy_cost)+")",1.5,1.5,0);
 
-draw_text_transformed(30,90,"Number of rain drops: " + string(meta_score.rain_count) + " (" + string(meta_shop.rain_count_saved) + "/" + string(meta_shop.rain_count_cost)+")",1.5,1.5,0);
+draw_text_transformed(30,95,"Max Energy: " + string(meta_score.max_energy) + " (" + string(meta_shop.Max_energy_saved) + "/" + string(meta_shop.Max_energy_cost)+")",1.5,1.5,0);
 
-draw_text_transformed(30,120,"Drop speed: " + string(meta_score.rain_speed) + " (" + string(meta_shop.rain_speed_saved) + "/" + string(meta_shop.rain_speed_cost)+")",1.5,1.5,0);
+draw_text_transformed(30,125,"Number of rain drops: " + string(meta_score.rain_count) + " (" + string(meta_shop.rain_count_saved) + "/" + string(meta_shop.rain_count_cost)+")",1.5,1.5,0);
 
-draw_text_transformed(30,150,"Time between damage: " + string(meta_score.damage_time) + " (" + string(meta_shop.damage_time_saved) + "/" + string(meta_shop.damage_time_cost)+")",1.5,1.5,0);
+draw_text_transformed(30,155,"Drop speed: " + string(meta_score.rain_speed) + " (" + string(meta_shop.rain_speed_saved) + "/" + string(meta_shop.rain_speed_cost)+")",1.5,1.5,0);
 
-draw_text_transformed(30,200,"Kid Max: " + string(meta_spawner.kid_max) + " (" + string(meta_shop.kid_number_saved) + "/" + string(meta_shop.kid_number_cost)+")",1.5,1.5,0);
+draw_text_transformed(30,190,"Time between damage: " + string(meta_score.damage_time) + " (" + string(meta_shop.damage_time_saved) + "/" + string(meta_shop.damage_time_cost)+")",1.5,1.5,0);
 
-draw_text_transformed(30,230,"Car Max: " + string(meta_spawner.car_max) + " (" + string(meta_shop.car_number_saved) + "/" + string(meta_shop.car_number_cost)+")",1.5,1.5,0);
+draw_text_transformed(30,220,"Movement Speed: " + string(meta_score.move_speed) + " (" + string(meta_shop.move_speed_saved) + "/" + string(meta_shop.move_speed_cost)+")",1.5,1.5,0);
 
-draw_text_transformed(180,400,"Start with " + string(meta_score.points+10) + " energy",1.5,1.5,0);
+
+draw_text_transformed(30,290,"Kid Max: " + string(meta_spawner.kid_max) + " (" + string(meta_shop.kid_number_saved) + "/" + string(meta_shop.kid_number_cost)+")",1.5,1.5,0);
+
+draw_text_transformed(30,320,"Car Max: " + string(meta_spawner.car_max) + " (" + string(meta_shop.car_number_saved) + "/" + string(meta_shop.car_number_cost)+")",1.5,1.5,0);
+
+
+draw_text_transformed(30,380,"Absolute Evilness " + string(meta_shop.evil_lvl) + " (" + string(meta_shop.evil_saved) + "/" + string(meta_shop.evil_cost)+")",1.5,1.5,0);
+
+
+draw_text_transformed(250,550,"Start with " + string(meta_score.points+10) + " energy",1.5,1.5,0);
 
 </string>
           </argument>

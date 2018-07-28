@@ -105,13 +105,28 @@ if(meta_score.points &gt; 0){
     switch(button_index)
     {
         case 1:
+            if(meta_shop.start_energy_lvl &lt;= 5){
+            meta_shop.start_energy_saved ++;
+            meta_score.points--;
+            if(meta_shop.start_energy_saved == meta_shop.start_energy_cost){
+                meta_shop.start_energy_lvl ++;
+                meta_score.start_energy = meta_score.start_energy+5;
+                meta_shop.start_energy_cost = meta_shop.start_energy_cost + 10*meta_shop.start_energy_lvl;
+                meta_shop.start_energy_saved = 0;
+                if(meta_shop.start_energy_lvl == 6){
+                    meta_shop.start_energy_cost = 0;
+                }
+            }
+        }
+        break;
+        case 2:
         if(meta_shop.Max_energy_lvl &lt;= 5){
             meta_shop.Max_energy_saved ++;
             meta_score.points--;
             if(meta_shop.Max_energy_saved == meta_shop.Max_energy_cost){
                 meta_shop.Max_energy_lvl ++;
                 meta_score.max_energy = meta_score.max_energy*2;
-                meta_shop.Max_energy_cost = meta_shop.Max_energy_cost + 10*meta_shop.Max_energy_lvl;
+                meta_shop.Max_energy_cost = meta_shop.Max_energy_cost + 5*meta_shop.Max_energy_lvl;
                 meta_shop.Max_energy_saved = 0;
                 if(meta_shop.Max_energy_lvl == 6){
                     meta_shop.Max_energy_cost = 0;
@@ -119,14 +134,14 @@ if(meta_score.points &gt; 0){
             }
         }
         break;
-        case 2:
+        case 3:
         if(meta_shop.rain_count_lvl &lt;= 5){
             meta_shop.rain_count_saved ++;
             meta_score.points--;
             if(meta_shop.rain_count_saved == meta_shop.rain_count_cost){
                 meta_shop.rain_count_lvl ++;
                 meta_score.rain_count ++;
-                meta_shop.rain_count_cost = meta_shop.rain_count_cost + 10*meta_shop.rain_count_lvl;
+                meta_shop.rain_count_cost = meta_shop.rain_count_cost + 5*meta_shop.rain_count_lvl;
                 meta_shop.rain_count_saved = 0;
                 if(meta_shop.rain_count_lvl == 6){
                     meta_shop.rain_count_cost = 0;
@@ -134,14 +149,14 @@ if(meta_score.points &gt; 0){
             }
         }
         break;
-        case 3:
+        case 4:
         if(meta_shop.rain_speed_lvl &lt;= 5){
             meta_shop.rain_speed_saved ++;
             meta_score.points--;
             if(meta_shop.rain_speed_saved == meta_shop.rain_speed_cost){
                 meta_shop.rain_speed_lvl ++;
                 meta_score.rain_speed += 0.2;
-                meta_shop.rain_speed_cost = meta_shop.rain_speed_cost + 10*meta_shop.rain_speed_lvl;
+                meta_shop.rain_speed_cost = meta_shop.rain_speed_cost + 5*meta_shop.rain_speed_lvl;
                 meta_shop.rain_speed_saved = 0;
                 if(meta_shop.rain_speed_lvl == 6){
                     meta_shop.rain_speed_cost = 0;
@@ -149,14 +164,14 @@ if(meta_score.points &gt; 0){
             }
         }
         break;
-        case 4:
+        case 5:
         if(meta_shop.damage_time_lvl &lt;= 5){
             meta_shop.damage_time_saved ++;
             meta_score.points--;
             if(meta_shop.damage_time_saved == meta_shop.damage_time_cost){
                 meta_shop.damage_time_lvl ++;
                 meta_score.damage_time += 100;
-                meta_shop.damage_time_cost = meta_shop.damage_time_cost + 10*meta_shop.damage_time_lvl;
+                meta_shop.damage_time_cost = meta_shop.damage_time_cost + 5*meta_shop.damage_time_lvl;
                 meta_shop.damage_time_saved = 0;
                 if(meta_shop.damage_time_lvl == 6){
                     meta_shop.damage_time_cost = 0;
@@ -164,14 +179,29 @@ if(meta_score.points &gt; 0){
             }
         }
         break;
-        case 5:
+        case 6:
+        if(meta_shop.move_speed_lvl &lt;= 5){
+            meta_shop.move_speed_saved ++;
+            meta_score.points--;
+            if(meta_shop.move_speed_saved == meta_shop.move_speed_cost){
+                meta_shop.move_speed_lvl ++;
+                meta_score.move_speed ++;
+                meta_shop.move_speed_cost = meta_shop.move_speed_cost + 5*meta_shop.move_speed_lvl;
+                meta_shop.move_speed_saved = 0;
+                if(meta_shop.move_speed_lvl == 6){
+                    meta_shop.move_speed_cost = 0;
+                }
+            }
+        }
+        break;
+        case 7:
         if(meta_shop.kid_number_lvl &lt;= 5){
             meta_shop.kid_number_saved ++;
             meta_score.points--;
             if(meta_shop.kid_number_saved == meta_shop.kid_number_cost){
                 meta_shop.kid_number_lvl ++;
                 meta_spawner.kid_max ++;
-                meta_shop.kid_number_cost = meta_shop.kid_number_cost + 15*meta_shop.kid_number_lvl;
+                meta_shop.kid_number_cost = meta_shop.kid_number_cost + 10*meta_shop.kid_number_lvl;
                 meta_shop.kid_number_saved = 0;
                 if(meta_shop.kid_number_lvl == 6){
                     meta_shop.kid_number_cost = 0;
@@ -179,18 +209,30 @@ if(meta_score.points &gt; 0){
             }
         }
         break;
-        case 6:
+        case 8:
         if(meta_shop.car_number_lvl &lt;= 5){
             meta_shop.car_number_saved ++;
             meta_score.points--;
             if(meta_shop.car_number_saved == meta_shop.car_number_cost){
                 meta_shop.car_number_lvl ++;
                 meta_spawner.car_max ++;
-                meta_shop.car_number_cost = meta_shop.car_number_cost + 15*meta_shop.car_number_lvl;
+                meta_shop.car_number_cost = meta_shop.car_number_cost + 10*meta_shop.car_number_lvl;
                 meta_shop.car_number_saved = 0;
                 if(meta_shop.car_number_lvl == 6){
                     meta_shop.car_number_cost = 0;
                 }
+            }
+        }
+        break;
+        
+        case 9:
+        if(meta_shop.evil_lvl == 0){
+            meta_shop.evil_saved ++;
+            meta_score.points--;
+            if(meta_shop.evil_saved == meta_shop.evil_cost){
+                meta_shop.evil_lvl ++;
+                evil++;
+                meta_shop.evil_cost = 0;
             }
         }
         break;

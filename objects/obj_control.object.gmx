@@ -57,6 +57,11 @@ game_over = false;
           <argument>
             <kind>1</kind>
             <string>// Goto shop
+audio_stop_sound(0);
+audio_stop_sound(1);
+audio_stop_sound(2);
+audio_stop_sound(3);    
+
 meta_spawner.kid_number = 0;
 meta_spawner.car_number = 0;
 meta_spawner.skyscraper_number = 0;

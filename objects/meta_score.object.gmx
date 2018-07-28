@@ -26,9 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>//Values for shop upgrades
-energy = 10;
+start_energy = 10;
 max_energy = 20; //between 20 - 200
 points = 0;
+
+move_speed = 3;
 
 
 rain_count = 1; //between 1-5
@@ -36,7 +38,7 @@ rain_speed = 1; //between 1-1.8
 
 damage_time = 100; //between 100-600
 
-
+evil = 0;
 </string>
           </argument>
         </arguments>

@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>//Shop Variables
+start_energy_lvl = 1;
+start_energy_cost = 10;
+start_energy_saved = 0;
+
 Max_energy_lvl = 1;
 Max_energy_cost = 10;
 Max_energy_saved = 0;
@@ -42,6 +46,11 @@ damage_time_lvl = 1;
 damage_time_cost = 10;
 damage_time_saved = 0;
 
+move_speed_lvl = 1;
+move_speed_cost = 10;
+move_speed_saved = 0;
+
+
 kid_number_lvl = 1;
 kid_number_cost = 15;
 kid_number_saved = 0;
@@ -50,6 +59,10 @@ car_number_lvl = 1;
 car_number_cost = 15;
 car_number_saved = 0;
 
+
+evil_lvl = 0;
+evil_cost = 50;
+evil_saved = 0;
 
 </string>
           </argument>

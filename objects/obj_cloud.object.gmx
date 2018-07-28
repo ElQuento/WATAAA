@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Variables
 
-energy = meta_score.energy;
+energy = meta_score.start_energy;
 max_energy = meta_score.max_energy;
 rain_count = meta_score.rain_count;
 points = meta_score.points;
@@ -247,7 +247,9 @@ if(height &lt; 10){
           <argument>
             <kind>1</kind>
             <string>/// Move to right
-if (phy_position_x + 3 &lt; room_width - sprite_width / 2) phy_position_x += 3;
+if (phy_position_x + 3 &lt; room_width - sprite_width / 2) 
+    if (instance_exists(obj_control))
+        phy_position_x += meta_score.move_speed*obj_control.level;
 </string>
           </argument>
         </arguments>
@@ -271,7 +273,9 @@ if (phy_position_x + 3 &lt; room_width - sprite_width / 2) phy_position_x += 3;
           <argument>
             <kind>1</kind>
             <string>/// Move to left
-if (phy_position_x - 3 &gt; sprite_width / 2) phy_position_x -= 3;
+if (phy_position_x - 3 &gt; sprite_width / 2) 
+    if (instance_exists(obj_control))
+        phy_position_x -= meta_score.move_speed*obj_control.level;
 </string>
           </argument>
         </arguments>
@@ -297,6 +301,7 @@ if (phy_position_x - 3 &gt; sprite_width / 2) phy_position_x -= 3;
             <string>/// Add energy (for testing purposes, delete later)
 
 energy += 5;
+meta_score.points +=5;
 </string>
           </argument>
         </arguments>

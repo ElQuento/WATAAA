@@ -58,10 +58,10 @@ alarm[0] = 14*60;
           <argument>
             <kind>1</kind>
             <string>if(instance_exists(obj_cloud)){
-    sound_stop(0);
-    sound_stop(1);
-    sound_stop(2);
-    sound_stop(3);
+    audio_stop_sound(0);
+    audio_stop_sound(1);
+    audio_stop_sound(2);
+    audio_stop_sound(3);
     if((obj_cloud.height &gt;= 30)){
         audio_play_sound(1,1,0);
     }else if(obj_cloud.height &gt;= 70){
