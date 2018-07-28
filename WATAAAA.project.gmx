@@ -27,6 +27,7 @@
     <sprite>sprites\spr_bg_cloud2</sprite>
     <sprite>sprites\spr_bg_cloud3</sprite>
     <sprite>sprites\spr_cursor</sprite>
+    <sprite>sprites\spr_title</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -55,10 +56,12 @@
     <object>objects\meta_sound</object>
     <object>objects\obj_bg_cloud</object>
     <object>objects\obj_cursor</object>
+    <object>objects\obj_title</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
     <room>rooms\rm_shop</room>
+    <room>rooms\rm_title</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

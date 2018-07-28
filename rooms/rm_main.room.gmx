@@ -123,7 +123,6 @@
     <instance objName="obj_bg_cloud" x="2176" y="768" name="inst_A4093797" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bg_cloud" x="6048" y="192" name="inst_CA8FE1AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_damn" x="18880" y="1792" name="inst_B19545D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_9773A017" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
     <instance objName="obj_street" x="6208" y="3536" name="inst_D14D3607" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="6080" y="3536" name="inst_26488CC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="5952" y="3536" name="inst_13D9E80D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -174,7 +173,6 @@
     <instance objName="obj_street" x="192" y="3536" name="inst_F6C330D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="64" y="3536" name="inst_4CA0A2A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="6336" y="3536" name="inst_B4305F1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_09F5E4BA" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
     <instance objName="obj_street" x="11472" y="3537" name="inst_FFBB2F37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="5056" y="3536" name="inst_2F5AE9D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="4928" y="3536" name="inst_9B10E73F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -262,7 +260,6 @@
     <instance objName="obj_street" x="5440" y="3536" name="inst_18803516" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="5312" y="3536" name="inst_C3011E39" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="5184" y="3536" name="inst_93345DFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_7919FFAE" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
     <instance objName="obj_street" x="11097" y="3536" name="inst_0F47023A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="10842" y="3536" name="inst_7B496EE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="10969" y="3536" name="inst_CDD652A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -290,7 +287,6 @@
     <instance objName="obj_street" x="12996" y="3537" name="inst_20FFE7E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="13124" y="3537" name="inst_67838FF2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="13252" y="3537" name="inst_D0456909" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_314F63FD" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
     <instance objName="obj_street" x="18965" y="3542" name="inst_7416E403" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="18837" y="3542" name="inst_83365E29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street" x="13888" y="3538" name="inst_CC0EE7ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
